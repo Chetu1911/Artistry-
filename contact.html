@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>contact Us </title>
+    <style>
+        .colors {
+            background: linear-gradient(to left, #1FA2FF, #12D8FA, #A6FFCB);
+            background: linear-gradient(to left, #000428, #004e92);
+            background: linear-gradient(to left, #ff6500, #ff1701);
+            background: linear-gradient(to left, #000428, #004e92);
+      }
+        body{
+            padding:0;
+            margin:0;
+            background-color: #fffefb;
+        }
+        
+        
+        .back-button{
+          border-radius: 1px solid black;
+          color: #000428;
+          display: block;
+         font-style: none;
+          text-decoration: none;
+        }
+        .contact-container{
+            background-color: azure;
+            display: block;
+            margin: 20px auto;
+            border-radius: 15px;
+            width: 50%;
+            box-shadow: 1px 1px 10px 0 black;
+            padding: 25px 30px;
+        }
+        
+        .shop-body{
+            display: flex;
+            flex-direction: column;
+            margin: 0 5px;
+        }
+        
+        
+        
+        .submit-button{
+            padding:5px 20px;
+            font-size: 17px;
+            color: white;
+            background: linear-gradient(to left, #ff6500, #ff1701);
+            border: none;
+            border-radius: 10px;
+        }
+        .submit-button:hover{
+            padding:5px 30px;
+            font-size: 17px;
+            border-radius: 10px;
+        }
+        
+        
+    </style>
+
+</head>
+<body>
+    
+   
+    <div class="contact-container">
+        <form id="contactForm" style="text-align: center;">
+        <h1 >Contact-Us</h1>
+        <div style="display: flex; flex-direction:column; justify-content: space-around; align-items: flex-start; padding-left: 20px;">
+             <div><i class="fa-solid fa-envelope" ></i> &nbsp;<label for="email">chetbahale@gmail.com</label></div>
+            
+            <br>
+        
+            <div><i class="fa-solid fa-location-dot"></i>&nbsp;<label for="address">JSPM'S BSIOTR Wagholi, Pune</label></div>
+            
+            <br>
+        
+            <div><i class="fa-solid fa-phone"></i>&nbsp;<label for="contactno">+91 7875009714</label></div>
+        </div>
+            <br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="3" required>
+            </textarea><br><br>
+        
+            <button type="button" class="submit-button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <div class="back-button">
+      <h1><a href="./index.html">Back To Home </a></h1>
+    </div>
+    
+</body>
+
+
+
+</html>

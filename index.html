@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Artistry Unveiled</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+         a{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .shop-header{
+            background: linear-gradient(to left, #09d6ff, #0068f1);
+            padding:2px 15px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            height:60px;
+        }
+        .shop-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 40px;
+        }
+        
+        .shop-name{
+            font-size: 30px;
+            font-weight: bolder;
+            margin: 0;
+            color: #ffffff;
+        }
+        
+        .navbar-menu-container{
+            display: flex;
+        }
+        .navbar-menu{
+            margin : 0 15px;
+            font-size: 15px;
+            padding: 5px 25px;
+            border-radius: 10px;
+            border : none;
+            background: linear-gradient(to left, #000428, #004e92);
+            color: rgb(254, 245, 245);
+        }
+        .navbar-anchor{
+            color:rgb(244, 238, 238);
+        }
+        .navbar-menu:hover {
+          background: none;
+          background-color: #ffe1f9;
+          
+        }
+        .navbar-menu:hover .navbar-anchor{
+          color: black;
+        }
+        body {
+            background-color: #ffffff;
+        }
+
+        .jumbotron {
+            background-image: url('./showacase.jpg');
+            background-size: cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            font-weight: bold;
+        }
+        .collapse{
+            background:linear-gradient(to right,rgb(238, 0, 255),rgb(255, 0, 106));
+        }
+        .logo-name{
+            font-family: cursive;
+           color: rgb(255, 0, 85);
+           font-weight: bold;
+           margin: 4px;
+        }
+
+        .display-4 {
+            font-size: 3.5em;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .nav-item{
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .lead {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .shop-sections {
+        margin: 13px 0;
+        padding: 20px 0;
+        border-bottom: 2px solid #004e92;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .book-section-title{
+        display: block;
+        margin:2px auto;
+        font-size: 25px;
+        font-weight: bold;
+        border-bottom: 3px solid #004e92;
+      }
+      .books-card {
+        width: 250px;
+        padding: 10px 20px;
+        margin: 5px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid black;
+        position: relative;
+      }
+      .books-card:hover {
+        width: 260px;
+        transition: 0.3s;
+        box-shadow: 1px 1px 10px 0 black;
+        border-radius: 10px;
+      }
+      .wishlist{
+        position: absolute;
+        top:10px;
+        right:10px;
+      }
+      .books-img {
+        height: 220px;
+        border: 1px solid white;
+      }
+      .books-name {
+        text-align: center;
+        font-size: 17px;
+      }
+      .books-price {
+        font-size: 20px;
+        color: #000;
+        font-weight: bold;
+      }
+      .add-cart-btn {
+        background: linear-gradient(to left, #ff6500, #ff1701);
+        padding: 7px 15px;
+        font-size: 15px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .add-cart-btn:hover {
+        font-size: 17px;
+        padding: 7px 20px;
+      }
+      .quantity-container {
+          width:80px;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+      }
+      .btn-quantity {
+          width: 20px;
+          cursor: pointer;
+      }
+      .product-quantity {
+          font-size: 20px;
+      }
+     /* Styles for the footer section */
+     .shop-footer {
+          background: linear-gradient(to left, #000428, #004e92);
+          color:white;
+          display: flex;
+          justify-content: space-around;
+          font-size: 15px;
+          padding-bottom: 10px;
+        }
+        .shop-footer a{
+          color:white;
+        } 
+        .footer-sec {
+          padding-left:10px;
+          width: 400px;
+          margin: 10px 10px;
+          border-right: 2px solid white;
+        }
+        .footer-sec-title {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .footer-data {
+          margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div class="shop-header">
+        <a href="./../index.html">
+            <div class="shop-container">
+               
+                <p class="shop-name"> Artistry</p>
+            </div>
+        </a>
+        
+        <div class="navbar-menu-container">
+            <button type="button" class="navbar-menu"><a href="./index.html" class="navbar-anchor"> Home </a></button>
+            <button type="button" class="navbar-menu"><a href="#" class="navbar-anchor"> About </a> </button>
+            <button type="button" class="navbar-menu"><a href="#" class="navbar-anchor"> Gallery </a> </button>
+            <button type="button" class="navbar-menu"><a href="./contact.html" class="navbar-anchor"> Contact </a> </button>
+            <button type="button" class="navbar-menu"><a href="#" class="navbar-anchor"> login </a> </button>
+
+        </div>
+    </div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <h1 class="display-4">Artistry Unveiled</h1>
+        <p class="lead">A showcase of breathtaking artistry</p>
+    </div>
+    <div class="shop-sections">
+        <div class="books-card"> 
+          <img src="./Art1.jpg" class="books-img" />
+
+          <p class="books-name">
+            The Art Book
+          </p>
+          <p class="books-price">174/-</p>
+          <div class="quantity-container">
+            <img src="./minus.png" class="btn-quantity" />
+
+            <span class="product-quantity" id="quantity-text-1">1</span>
+
+            <img src="./plus.png" class="btn-quantity"  />
+        </div>
+        
+        
+          <button type="button" class="add-cart-btn"  >
+    
+          Add to card
+          </button>
+        </div>
+        <div class="books-card">
+            <img src="./Art1.jpg" class="books-img" />
+  
+            <p class="books-name">Girl with a Pearl Earring</p>
+            <p class="books-price">554/-</p>
+            <div class="quantity-container">
+              <div class="quantity-container1">
+                <img src="./minus.png" class="btn-quantity" />
+                <span class="product-quantity" id="quantity-text-2">1</span>
+                <img src="./plus.png" class="btn-quantity" />
+            </div>
+            </div>
+            
+            <button type="button" class="add-cart-btn" >
+              Add to cart
+            </button>
+          </div>
+          <div class="books-card">
+            <img src="./Art1.jpg" class="books-img"/>
+
+          <p class="books-name">
+            History of art
+          </p>
+          <p class="books-price">208/-</p>
+          <div class="quantity-container">
+            <img src="./minus.png" class="btn-quantity"  />
+            <span class="product-quantity" id="quantity-text-3">1</span>
+            <img src="./plus.png" class="btn-quantity"  />
+        </div>
+          <button type="button" class="add-cart-btn"  >
+            Add to cart
+          </button>
+        </div>
+
+        <div class="books-card">
+          <img src="./Art1.jpg" class="books-img"/>
+
+          <p class="books-name">Art and Fear</p>
+          <p class="books-price">400/-</p>
+          <div class="quantity-container">
+            <img src="./minus.png" class="btn-quantity"  />
+            <span class="product-quantity" id="quantity-text-4">1</span>
+            <img src="./plus.png" class="btn-quantity" />
+        </div>
+          <button type="button" class="add-cart-btn"  >
+            Add to cart
+          </button>
+        </div>
+        <div class="books-card">
+          <img src="./Art1.jpg" class="books-img" />
+
+          <p class="books-name">The Goldfinch
+        </p>
+          <p class="books-price">249/-</p>
+          <div class="quantity-container">
+            <img src="./minus.png" class="btn-quantity"  />
+            <span class="product-quantity" id="quantity-text-5">1</span>
+            <img src="./plus.png" class="btn-quantity"  />
+        </div>
+          <button type="button" class="add-cart-btn"  >
+            Add to cart
+          </button>
+        </div>
+      </div>
+       <!-- Footer Section -->
+
+    <div class="shop-footer">
+        <div class="footer-sec">
+          <p class="footer-sec-title">Quick Links</p>
+          <div class="footer-data" style="padding-left:20px;">
+            <p><a href="index.html">Home </a></p>
+            <p><a href="./pages/fiction.html">Gallery </a></p>
+            <p><a href="./pages/personality.html">contact </a></p>
+        
+            <p><a href="./pages/login.html"> Login </a></p>
+          </div>
+        </div>
+        <div class="footer-sec">
+          <p class="footer-sec-title">Social :</p>
+          <div class="footer-data">
+            <p>
+              <i class="fa-solid fa-envelope"></i> &nbsp; &nbsp;
+              <a href="mailto:bahalechetana2004@gmail.com">chetbahale@gmail.com</a>
+            </p>
+  
+            <p>
+              <i class="fa-solid fa-phone"></i> &nbsp; &nbsp;
+              <a href="tel:+918805803087" class="footer-anchor">
+                +91-8805803087</a
+              >
+            </p>
+  
+            <p style="cursor: pointer;"><i class="fa-brands fa-facebook" ></i> &nbsp; &nbsp; Facebook</p>
+  
+            <p style="cursor: pointer;"><i class="fa-brands fa-twitter"></i> &nbsp; &nbsp; Twitter</p>
+  
+            <p style="cursor: pointer;"><i class="fa-brands fa-instagram"></i> &nbsp; &nbsp; Instagram</p>
+  
+            <p style="cursor: pointer;"><i class="fa-brands fa-linkedin"></i> &nbsp; &nbsp; LinkedIn</p>
+          </div>
+        </div>
+        <div class="footer-sec">
+          <p class="footer-sec-title">
+            <a href="./contact.html"> Contact us :</a>
+          </p>
+          <div class="footer-data">
+            <p>
+              <i class="fa-solid fa-location-dot"></i> &nbsp; &nbsp;
+              <a href="https://maps.app.goo.gl/N3ngnED1vBDYVvj19" target="blank">
+                JSPM's BSIOTR Wagholi</a
+              >
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i> &nbsp; &nbsp;
+              <a href="mailto:bahalechetana2004@gmail.com">chetbahale2004@gmail.com</a>
+            </p>
+  
+            <p>
+              <i class="fa-solid fa-phone"></i> &nbsp; &nbsp;
+              <a href="tel:+917875009714"> +91-8765004427</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
